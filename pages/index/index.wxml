@@ -1,7 +1,42 @@
 <!--index.wxml-->
-<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<navigation-bar title="强风吹拂" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
-    Hello World
+    <!-- Hero Carousel -->
+    <swiper class="hero-carousel" indicator-dots autoplay circular>
+      <swiper-item wx:for="{{heroImages}}" wx:key="index">
+        <image class="hero-image" src="{{item}}" mode="aspectFill" />
+      </swiper-item>
+    </swiper>
+
+    <view class="map-section">
+      <text class="section-title">当前位置</text>
+      <view class="map-container">
+        <map
+          class="map"
+          latitude="{{latitude}}"
+          longitude="{{longitude}}"
+          scale="14"
+          show-location
+        ></map>
+        <view class="location-btn" bindtap="getLocation">
+          <text class="location-icon">📍</text>
+        </view>
+      </view>
+      <text class="location-text">经度: {{longitude}}, 纬度: {{latitude}}</text>
+    </view>
+    
+    <view class="images-section">
+      <text class="section-title">跑步风采</text>
+      <view class="images-grid">
+        <image 
+          wx:for="{{randomImages}}" 
+          wx:key="index"
+          class="random-image"
+          src="{{item}}"
+          mode="aspectFill"
+        />
+      </view>
+    </view>
   </view>
 </scroll-view>

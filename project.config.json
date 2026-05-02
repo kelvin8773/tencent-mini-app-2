@@ -11,7 +11,9 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "useCompilerPlugins": ["typescript"],
+    "useCompilerPlugins": [
+      "typescript"
+    ],
     "minifyWXML": true
   },
   "compileType": "miniprogram",
@@ -20,6 +22,6 @@
     "ignore": [],
     "include": []
   },
-  "appid": "touristappid",
+  "appid": "wx26b11d971fa19535",
   "editorSetting": {}
 }
