@@ -12,8 +12,8 @@ interface LocationResult {
 
 Page<IPageData>({
   data: {
-    latitude: 23.1323,
-    longitude: 113.3308,
+    latitude: 23.1380,  // Default location - 广州市天河体育中心
+    longitude: 113.3250, // Default location - 广州市天河体育中心
     randomImages: [],
     heroImages: []
   },
@@ -32,7 +32,7 @@ Page<IPageData>({
         });
       },
       fail: () => {
-        // 使用默认位置：广州市天河体育中心
+        // 使用默认位置：广州市天河体育中心 - 已有默认标记
       }
     });
   },

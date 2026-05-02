@@ -16,7 +16,7 @@
           class="map"
           latitude="{{latitude}}"
           longitude="{{longitude}}"
-          scale="14"
+          scale="16"
           show-location
         ></map>
         <view class="location-btn" bindtap="getLocation">
